@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" x-data="{menuIsOpen:false}">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,9 +13,9 @@
   <!-- https://emmet.io/ -->
   <!-- header>h1{Test de menu} -->
   <header>
-    <button>aria-controls="mainNav"Menu</button>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Ouvrir></button>
     <h1>Test de menu</h1>
-    <nav id="mainNav">
+    <nav id="mainNav" x-show="menuIsOpen" x-transition>
       <ul>
         <li><a href="#">item a</a></li>
         <li><a href="#">item b</a></li>
