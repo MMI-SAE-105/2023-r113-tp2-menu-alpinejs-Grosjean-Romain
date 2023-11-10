@@ -10,12 +10,10 @@
 </head>
 
 <body>
-  <!-- https://emmet.io/ -->
-  <!-- header>h1{Test de menu} -->
   <header>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Ouvrir></button>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Ouvrir</button>
     <h1>Test de menu</h1>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms>
       <ul>
         <li><a href="#">item a</a></li>
         <li><a href="#">item b</a></li>
@@ -23,7 +21,6 @@
       </ul>
     </nav>
   </header>
-  <!-- h2>lorem2^p>lorem -->
   <h2>Lorem, ipsum.</h2>
   <p>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
