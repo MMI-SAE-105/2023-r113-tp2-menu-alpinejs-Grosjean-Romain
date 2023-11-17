@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"style="background-color:#ff7979 ; border-color:#000000 ; color:#ffffff">
             Menu
         </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
@@ -32,9 +32,11 @@
                 <li><a href="../index.html">Page d'accueil<img
                             src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
                 <li><a href="../cats/blackcats.html">Chats noirs<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a>
+                </li>
                 <li><a href="../cats/colorcats.html">Autres chats<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a>
+                </li>
                 <li><a href="../dogs/index.html">CANIS LUPUS FAMILIARIS<img
                             src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
                 <li><a href="../dogs/goldenretriever.html">Golden Retriever<img
@@ -43,6 +45,13 @@
                             src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
             </ul>
         </nav>
-        <h1>Les chats (FELIS CATUS)</h1>
     </header>
 </body>
+
+<h1>Les chats (FELIS CATUS)</h1>
+<button aria-controls="infos" @click="pM = ! pM">
+    Infos ?</button>
+<div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+    <p>
+        Les chats...
+    </p>

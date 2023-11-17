@@ -1,5 +1,5 @@
-.background-color {
-    background: #e2e0a2;
+body {
+    background: #56294a;
 }
 
 .menu {
@@ -22,3 +22,8 @@
 .noscroll body {
     overflow: hidden;
 }
+
+h1 {
+    color:
+}
+
