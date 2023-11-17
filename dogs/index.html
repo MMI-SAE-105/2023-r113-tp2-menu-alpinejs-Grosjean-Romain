@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{
+  menuIsOpen:false,
+  pM:false,
+  pSC:false,
+  pSD:false,
+  P1:false,
+  P2:false,
+  P3:false,
+  P4:false
+
+
+  }" :class="{noscroll:menuIsOpen,}" x-data="{menuIsOpen:false}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="../src/css/style.css">
+    </link>
+</head>
+
+<body>
+    <header>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">
+            Menu
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <ul>
+                <li><a href="../index.html">Page d'accueil<img src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../cats/index.html">FELIS CATUS<img
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+                <li><a href="../cats/blackcats.html">Chats noirs<img
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                <li><a href="../cats/colorcats.html">Autres chats<img
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                <li><a href="../dogs/goldenretriever.html">Golden Retriever<img
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                <li><a href="../dogs/colordogs.html">Autres chiens<img
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+            </ul>
+        </nav>
+        <h1>Les chiens (CANIS LUPUS FAMILIARIS)</h1>
+    </header>
+</body>
