@@ -21,8 +21,8 @@
             style="background-color:#ff7979 ; border-color:#000000"><img src="/public/icones/MdiMenu.svg"> </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
-                <li><a href="../index.html">Page d'accueil<img src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-                            alt="flèche lien"></a></li>
+                <li><a href="../index.html">Page d'accueil<img
+                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
                 <li><a href="../cats/index.html">FELIS CATUS<img
                             src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
                 <li><a href="../cats/blackcats.html">Chats noirs<img
@@ -35,12 +35,21 @@
                             src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
             </ul>
         </nav>
+        <aside>
+            <button aria-controls="Homepage" @click="HP = !HP">
+                <a href="../index.html">
+                    <img src="/public/icones/MdiHome.svg" alt="accueil">
+                </a>
+            </button>
+        </aside>
     </header>
-</body>
 
-<h1>Les autres chiens</h1>
-<button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
-<div id="petitmenu" x-show="pM" x-transition.duration.800ms>
-    <p>
-        . Source : <a href="https://fr.wikipedia.org/wiki/Chat" target="_blank">Wikipédia</a>
-    </p>
+
+    <h1>Les autres chiens</h1>
+    <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
+    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+        <p>
+            . Source : <a href="https://fr.wikipedia.org/wiki/Chat" class="nounderline" target="_blank">Wikipédia</a>
+        </p>
+
+</body>

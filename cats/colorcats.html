@@ -35,12 +35,21 @@
                             src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
             </ul>
         </nav>
+        <aside>
+            <button aria-controls="Homepage" @click="HP = !HP">
+                <a href="../index.html">
+                    <img src="/public/icones/MdiHome.svg" alt="accueil">
+                </a>
+            </button>
+        </aside>
     </header>
-</body>
 
-<h1>Les autres chats</h1>
-<button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
-<div id="petitmenu" x-show="pM" x-transition.duration.800ms>
-    <p>
-        . Source : <a href="https://fr.wikipedia.org/wiki/Chat" target="_blank">Wikipédia</a>
-    </p>
+
+    <h1>Les autres chats</h1>
+    <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
+    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+        <p>
+            . Source : <a href="https://fr.wikipedia.org/wiki/Chat" class="nounderline" target="_blank">Wikipédia</a>
+        </p>
+
+</body>

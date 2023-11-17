@@ -8,7 +8,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #eacbcb;
+    background: #e79a9a;
     display: grid;
     place-content: center;
 }
@@ -22,6 +22,12 @@ body {
 .noscroll body {
     overflow: hidden;
 }
+
+.link-text {
+    color: #56294a;
+    ;
+}
+
 
 h1 {
     color: #ffffff
@@ -44,4 +50,24 @@ button {
     border-color: #000000;
     color: #ffffff"
 
+}
+
+dd {
+    color: #fbdcdc
+}
+
+aside {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+a[href="https://www.enviedeplus.com/famille/animaux-de-compagnie/superstition-chat-noir"],
+a[href="https: //fr.wikipedia.org/wiki/Chien"],
+a[href="https: //fr.wikipedia.org/wiki/Chat"] {
+
+    color: #b56eb0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
 }

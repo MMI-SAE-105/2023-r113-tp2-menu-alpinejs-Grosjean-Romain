@@ -16,8 +16,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test menu</title>
+  <title>Nos Animaux !</title>
   <script defer src="https://unpkg.com/alpinejs"></script>
+  <link rel="icon" href="/public/icones/MaterialSymbolsLightPets.svg">
   <link rel="stylesheet" href="/src/css/style.css">
   </link>
 </head>
@@ -28,31 +29,33 @@
       style="background-color:#ff7979 ; border-color:#000000"><img src="/public/icones/MdiMenu.svg"> </button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li><a href="cats/index.html">FELIS CATUS<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></li>
-        <li><a href="cats/blackcats.html">Chats noirs<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></li>
-        <li><a href="cats/colorcats.html">Autres chats<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></li>
-        <li><a href="dogs/index.html">CANIS LUPUS FAMILIARIS<img
+        <li><a href="cats/index.html" class="link-text">FELIS CATUS<img
               src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
-        <li><a href="dogs/goldenretriever.html">Golden Retriever<img
+        <li><a href="cats/blackcats.html" class="link-text">Chats noirs<img
               src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
-        <li><a href="dogs/colordogs.html">Autres chiens<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></li>
+        <li><a href="cats/colorcats.html" class="link-text">Autres chats<img
+              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+        <li><a href="dogs/index.html" class="link-text">CANIS LUPUS FAMILIARIS<img
+              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" style="color:#ffffff"></a>
+        </li>
+        <li><a href="dogs/goldenretriever.html" class="link-text">Golden Retriever<img
+              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+        <li><a href="dogs/colordogs.html" class="link-text">Autres chiens<img
+              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Animaux de compagnie</h1>
-    <h2>Accueil</h2>
-    <p>
-      Bienvenue à tous. Ceci est une page dédiée à nos meilleurs amis : les animaux de compagnie. Ce site est
-      principalement centré autour des chats et des chiens, les animaux de compagnie les plus connus et répandus à
-      travers le globe.
-    </p>
-
+    <section>
+      <h1>Animaux de compagnie</h1>
+      <h2>Accueil</h2>
+      <p>
+        Bienvenue à tous. Ceci est une page dédiée à nos meilleurs amis : les animaux de compagnie. Ce site est
+        principalement centré autour des chats et des chiens, les animaux de compagnie les plus connus et répandus à
+        travers le globe.
+      </p>
+    </section>
     <button aria-controls="petitmenu" @click="pM = ! pM" style="background-color:#ff7979 ; border-color:#000000">
       Liste des pages</button>
     <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
@@ -66,7 +69,7 @@
           <dt aria-controls="Nav1" @click="P1 = ! P1"><button
               style="background-color:#e4b2fe ; border-color:#000000">Chats noirs</button></dt>
           <dd id="Nav1" x-show="P1" x-transition.duration.800ms>Ce lien amène à la page consacré aux chats noirs :</dd>
-          <dd id="Nav1" x-show="P1" x-transition.duration.800ms><a href="/cats/blackcats.html"><img
+          <dd id="Nav1Content" x-show="P1" x-transition.duration.800ms><a href="/cats/blackcats.html"><img
                 src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></dd>
         </dl>
         <dl x-data="{P2:false}">
@@ -74,7 +77,7 @@
               style="background-color:#e4b2fe ; border-color:#000000">Autres chats</button></dt>
           <dd id="Nav2" x-show="P2" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chats :
           </dd>
-          <dd id="Nav2" x-show="P2" x-transition.duration.800ms><a href="/cats/colorcats.html"><img
+          <dd id="Nav2Content" x-show="P2" x-transition.duration.800ms><a href="/cats/colorcats.html"><img
                 src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></dd>
         </dl>
       </div>
@@ -88,7 +91,8 @@
         <dl x-data="{P3:false}">
           <dt aria-controls="Nav3" @click="P3 = ! P3"><button
               style="background-color:#e4b2fe ; border-color:#000000">Golden retriever</button></dt>
-          <dd id="Nav3" x-show="P3" x-transition.duration.800ms>Ce lien amène à la page consacré aux Golden retriever :
+          <dd id="Nav3Content" x-show="P3" x-transition.duration.800ms>Ce lien amène à la page consacré aux Golden
+            retriever :
           </dd>
           <dd id="Nav3" x-show="P3" x-transition.duration.800ms><a href="/dogs/goldenretriever.html"><img
                 src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></dd>
@@ -97,7 +101,8 @@
         <dl x-data="{P4:false}">
           <dt aria-controls="Nav4" @click="P4 = ! P4"><button
               style="background-color:#e4b2fe ; border-color:#000000">Autres chiens</button></dt>
-          <dd id="Nav4" x-show="P4" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chiens :
+          <dd id="Nav4Content" x-show="P4" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres
+            chiens :
           </dd>
           <dd id="Nav4" x-show="P4" x-transition.duration.800ms><a href="/dogs/colordogs.html"><img
                 src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></dd>
