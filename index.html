@@ -26,22 +26,22 @@
 <body>
   <header>
     <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
-      style="background-color:#ff7979 ; border-color:#000000"><img src="/public/icones/MdiMenu.svg"> </button>
+      ><img src="/public/icones/MdiMenu.svg"> </button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
-        <li><a href="cats/index.html" class="link-text">FELIS CATUS<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
-        <li><a href="cats/blackcats.html" class="link-text">Chats noirs<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
-        <li><a href="cats/colorcats.html" class="link-text">Autres chats<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
-        <li><a href="dogs/index.html" class="link-text">CANIS LUPUS FAMILIARIS<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien" style="color:#ffffff"></a>
+        <li><a href="cats/index.html" class="link-text">FELIS CATUS<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien"></a></li>
+        <li><a href="cats/blackcats.html" class="link-text">Chats noirs<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien"></a></li>
+        <li><a href="cats/colorcats.html" class="link-text">Autres chats<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien"></a></li>
+        <li><a href="dogs/index.html" class="link-text">CANIS LUPUS FAMILIARIS<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien"></a>
         </li>
         <li><a href="dogs/goldenretriever.html" class="link-text">Golden Retriever<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
-        <li><a href="dogs/colordogs.html" class="link-text">Autres chiens<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+              src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
+        <li><a href="dogs/colordogs.html" class="link-text">Autres chiens<img src="/public/icones/MdiMenuRight.svg"
+              alt="flèche lien"></a></li>
       </ul>
     </nav>
   </header>
@@ -56,25 +56,23 @@
         travers le globe.
       </p>
     </section>
-    <button aria-controls="petitmenu" @click="pM = ! pM" style="background-color:#ff7979 ; border-color:#000000">
+    <button aria-controls="petitmenu" @click="pM = ! pM">
       Liste des pages</button>
     <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
 
-      <button aria-controls="sousmenuchat" @click="pSC = ! pSC" style="background-color:#de8b8b ; border-color:#000000">
+      <button aria-controls="sousmenuchat" @click="pSC = ! pSC" class="ChienChatColor">
         Chats</button>
       <div id="sousmenuchat" x-show="pSC" x-transition.duration.800ms><a href="/cats/index.html"><img
             src="/public/icones/MaterialSymbolsLink.svg" alt="link"></a>
 
         <dl x-data="{P1:false}">
-          <dt aria-controls="Nav1" @click="P1 = ! P1"><button
-              style="background-color:#e4b2fe ; border-color:#000000">Chats noirs</button></dt>
+          <dt aria-controls="Nav1" @click="P1 = ! P1"><button class="Nav1-4Color">Chats noirs</button></dt>
           <dd id="Nav1" x-show="P1" x-transition.duration.800ms>Ce lien amène à la page consacré aux chats noirs :</dd>
           <dd id="Nav1Content" x-show="P1" x-transition.duration.800ms><a href="/cats/blackcats.html"><img
                 src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></dd>
         </dl>
         <dl x-data="{P2:false}">
-          <dt aria-controls="Nav2" @click="P2 = ! P2"><button
-              style="background-color:#e4b2fe ; border-color:#000000">Autres chats</button></dt>
+          <dt aria-controls="Nav2" @click="P2 = ! P2"><button class="Nav1-4Color">Autres chats</button></dt>
           <dd id="Nav2" x-show="P2" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chats :
           </dd>
           <dd id="Nav2Content" x-show="P2" x-transition.duration.800ms><a href="/cats/colorcats.html"><img
@@ -82,15 +80,13 @@
         </dl>
       </div>
 
-      <button aria-controls="sousmenuchien" @click="pSD = ! pSD"
-        style="background-color:#de8b8b ; border-color:#000000">
+      <button aria-controls="sousmenuchien" @click="pSD = ! pSD" class="ChienChatColor">
         Chiens</button>
       <div id="sousmenuchien" x-show="pSD" x-transition.duration.800ms><a href="/dogs/index.html"><img
             src="/public/icones/MaterialSymbolsLink.svg" alt="link"></a>
 
         <dl x-data="{P3:false}">
-          <dt aria-controls="Nav3" @click="P3 = ! P3"><button
-              style="background-color:#e4b2fe ; border-color:#000000">Golden retriever</button></dt>
+          <dt aria-controls="Nav3" @click="P3 = ! P3"><button class="Nav1-4Color">Golden retriever</button></dt>
           <dd id="Nav3Content" x-show="P3" x-transition.duration.800ms>Ce lien amène à la page consacré aux Golden
             retriever :
           </dd>
@@ -99,8 +95,7 @@
         </dl>
         </dl>
         <dl x-data="{P4:false}">
-          <dt aria-controls="Nav4" @click="P4 = ! P4"><button
-              style="background-color:#e4b2fe ; border-color:#000000">Autres chiens</button></dt>
+          <dt aria-controls="Nav4" @click="P4 = ! P4"><button class="Nav1-4Color">Autres chiens</button></dt>
           <dd id="Nav4Content" x-show="P4" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres
             chiens :
           </dd>
@@ -118,9 +113,7 @@
       <img src="/public/img/collage-animal-mignon-isole.jpg" alt="pets 2" width=27.8% height=27.8%>
       <img src="/public/img/beau-portrait-animal-familier-petit-chien-chat.jpg" alt="pets 3" width=40% height=40%>
     </section>
-
   </main>
 </body>
-
 
 </html>

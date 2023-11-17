@@ -16,6 +16,9 @@ body {
 .header__menuBtn {
     position: relative;
     z-index: 10;
+    background-color: #ff7979;
+    border-color: #000000;
+    color: #000000;
 }
 
 .noscroll,
@@ -25,35 +28,53 @@ body {
 
 .link-text {
     color: #56294a;
-    ;
 }
 
 
+.ChienChatColor {
+    background-color: #de8b8b;
+    border-color: #000000;
+    color: #000000;
+}
+
+.Nav1-4Color {
+    background-color: #e4b2fe;
+    border-color: #000000;
+    color: #000000;
+}
+
+.intern-link
+{
+        background-color: #e4b2fe;
+        border-color: #000000;
+        color: #000000;
+    }
+
 h1 {
-    color: #ffffff
+    color: #ffffff;
 }
 
 h2 {
-    color: #fbdcdc
+    color: #fbdcdc;
 }
 
 h3 {
-    color: #fbdcdc
+    color: #fbdcdc;
 }
 
 p {
-    color: #ffffff
+    color: #ffffff;
 }
 
 button {
     background-color: #ff7979;
     border-color: #000000;
-    color: #ffffff"
+    color: #000000;
 
 }
 
 dd {
-    color: #fbdcdc
+    color: #fbdcdc;
 }
 
 aside {
@@ -62,9 +83,17 @@ aside {
     right: 7px;
 }
 
+.media--fullwidth {
+    width: 75%;
+    height: auto;
+}
+
 a[href="https://www.enviedeplus.com/famille/animaux-de-compagnie/superstition-chat-noir"],
-a[href="https: //fr.wikipedia.org/wiki/Chien"],
-a[href="https: //fr.wikipedia.org/wiki/Chat"] {
+a[href="https://fr.wikipedia.org/wiki/Chien"],
+a[href="https://fr.wikipedia.org/wiki/Chat"],
+a[href="https://www.woopets.fr/chien/race/golden-retriever/"],
+a[href="https://www.zooplus.fr/magazine/chien/races-de-chien"] {
+
 
     color: #b56eb0;
     font-style: italic;

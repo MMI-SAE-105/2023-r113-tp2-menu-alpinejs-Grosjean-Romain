@@ -9,8 +9,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
+    <title>Les chats | Nos Animaux !</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="icon" href="../public/icones/MaterialSymbolsLightPets.svg">
     <link rel="stylesheet" href="../src/css/style.css">
     </link>
 </head>
@@ -18,23 +19,23 @@
 <body>
     <header>
         <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
-            style="background-color:#ff7979 ; border-color:#000000"><img src="/public/icones/MdiMenu.svg"> </button>
+           ><img src="/public/icones/MdiMenu.svg"> </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
                 <li><a href="../index.html">Page d'accueil<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
                 <li><a href="../cats/blackcats.html">Chats noirs<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a>
+                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a>
                 </li>
                 <li><a href="../cats/colorcats.html">Autres chats<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a>
+                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a>
                 </li>
-                <li><a href="../dogs/index.html">CANIS LUPUS FAMILIARIS<img
-                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+                <li><a href="../dogs/index.html">Les chiens<img
+                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
                 <li><a href="../dogs/goldenretriever.html">Golden Retriever<img
-                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
                 <li><a href="../dogs/colordogs.html">Autres chiens<img
-                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
+                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
             </ul>
         </nav>
         <aside>
