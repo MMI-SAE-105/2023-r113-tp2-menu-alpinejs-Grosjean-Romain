@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" x-data="{
   menuIsOpen:false,
-  pM:false,
-  pSC:false,
-  pSD:false,
-  P1:false,
-  P2:false,
-  P3:false,
-  P4:false
-
+  pM:false
 
   }" :class="{noscroll:menuIsOpen,}" x-data="{menuIsOpen:false}">
 
@@ -24,34 +17,35 @@
 
 <body>
     <header>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"style="background-color:#ff7979 ; border-color:#000000 ; color:#ffffff">
-            Menu
-        </button>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
+            style="background-color:#ff7979 ; border-color:#000000"><img src="/public/icones/MdiMenu.svg"> </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
                 <li><a href="../index.html">Page d'accueil<img
                             src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
                 <li><a href="../cats/blackcats.html">Chats noirs<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a>
+                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a>
                 </li>
                 <li><a href="../cats/colorcats.html">Autres chats<img
-                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a>
+                            src="../public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a>
                 </li>
                 <li><a href="../dogs/index.html">CANIS LUPUS FAMILIARIS<img
-                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
                 <li><a href="../dogs/goldenretriever.html">Golden Retriever<img
-                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
                 <li><a href="../dogs/colordogs.html">Autres chiens<img
-                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+                            src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
             </ul>
         </nav>
     </header>
 </body>
 
 <h1>Les chats (FELIS CATUS)</h1>
-<button aria-controls="infos" @click="pM = ! pM">
-    Infos ?</button>
+<button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
 <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
     <p>
-        Les chats...
+        Le Chat domestique (Felis catus) est une espèce de mammifères carnivores, de la famille des Félidés. Issu de la
+        domestication du chat sauvage Felis silvestris, il était anciennement considéré comme une sous-espèce de
+        celui-ci, sous la dénomination Felis silvestris catus. Source : <a href="https://fr.wikipedia.org/wiki/Chat"
+            target="_blank">Wikipédia</a>
     </p>

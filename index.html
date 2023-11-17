@@ -24,23 +24,22 @@
 
 <body>
   <header>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn" style="background-color:#ff7979 ; border-color:#000000">
-      Menu
-    </button>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
+      style="background-color:#ff7979 ; border-color:#000000"><img src="/public/icones/MdiMenu.svg"> </button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
       <ul>
         <li><a href="cats/index.html">FELIS CATUS<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
               alt="flèche lien"></a></li>
         <li><a href="cats/blackcats.html">Chats noirs<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></a></li>
+              alt="flèche lien"></a></li>
         <li><a href="cats/colorcats.html">Autres chats<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></a></li>
+              alt="flèche lien"></a></li>
         <li><a href="dogs/index.html">CANIS LUPUS FAMILIARIS<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
         <li><a href="dogs/goldenretriever.html">Golden Retriever<img
-              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></a></li>
+              src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></li>
         <li><a href="dogs/colordogs.html">Autres chiens<img src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg"
-              alt="flèche lien"></a></a></li>
+              alt="flèche lien"></a></li>
       </ul>
     </nav>
   </header>
@@ -49,8 +48,9 @@
     <h1>Animaux de compagnie</h1>
     <h2>Accueil</h2>
     <p>
-      Bienvenue à tous. Ceci est une page dédiée à nos meilleurs amis les animaux de compagnie, principalement les chats
-      et les chiens.
+      Bienvenue à tous. Ceci est une page dédiée à nos meilleurs amis : les animaux de compagnie. Ce site est
+      principalement centré autour des chats et des chiens, les animaux de compagnie les plus connus et répandus à
+      travers le globe.
     </p>
 
     <button aria-controls="petitmenu" @click="pM = ! pM" style="background-color:#ff7979 ; border-color:#000000">
@@ -63,13 +63,15 @@
             src="/public/icones/MaterialSymbolsLink.svg" alt="link"></a>
 
         <dl x-data="{P1:false}">
-          <dt aria-controls="Nav1" @click="P1 = ! P1"><button style="background-color:#e4b2fe ; border-color:#000000">Chats noirs</button></dt>
+          <dt aria-controls="Nav1" @click="P1 = ! P1"><button
+              style="background-color:#e4b2fe ; border-color:#000000">Chats noirs</button></dt>
           <dd id="Nav1" x-show="P1" x-transition.duration.800ms>Ce lien amène à la page consacré aux chats noirs :</dd>
           <dd id="Nav1" x-show="P1" x-transition.duration.800ms><a href="/cats/blackcats.html"><img
                 src="/public/icones/MaterialSymbolsArrowRightAltRounded.svg" alt="flèche lien"></a></dd>
         </dl>
         <dl x-data="{P2:false}">
-          <dt aria-controls="Nav2" @click="P2 = ! P2"><button style="background-color:#e4b2fe ; border-color:#000000">Autres chats</button></dt>
+          <dt aria-controls="Nav2" @click="P2 = ! P2"><button
+              style="background-color:#e4b2fe ; border-color:#000000">Autres chats</button></dt>
           <dd id="Nav2" x-show="P2" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chats :
           </dd>
           <dd id="Nav2" x-show="P2" x-transition.duration.800ms><a href="/cats/colorcats.html"><img
@@ -77,13 +79,15 @@
         </dl>
       </div>
 
-      <button aria-controls="sousmenuchien" @click="pSD = ! pSD" style="background-color:#de8b8b ; border-color:#000000">
+      <button aria-controls="sousmenuchien" @click="pSD = ! pSD"
+        style="background-color:#de8b8b ; border-color:#000000">
         Chiens</button>
       <div id="sousmenuchien" x-show="pSD" x-transition.duration.800ms><a href="/dogs/index.html"><img
             src="/public/icones/MaterialSymbolsLink.svg" alt="link"></a>
 
         <dl x-data="{P3:false}">
-          <dt aria-controls="Nav3" @click="P3 = ! P3"><button style="background-color:#e4b2fe ; border-color:#000000">Golden retriever</button></dt>
+          <dt aria-controls="Nav3" @click="P3 = ! P3"><button
+              style="background-color:#e4b2fe ; border-color:#000000">Golden retriever</button></dt>
           <dd id="Nav3" x-show="P3" x-transition.duration.800ms>Ce lien amène à la page consacré aux Golden retriever :
           </dd>
           <dd id="Nav3" x-show="P3" x-transition.duration.800ms><a href="/dogs/goldenretriever.html"><img
@@ -91,7 +95,8 @@
         </dl>
         </dl>
         <dl x-data="{P4:false}">
-          <dt aria-controls="Nav4" @click="P4 = ! P4"><button style="background-color:#e4b2fe ; border-color:#000000">Autres chiens</button></dt>
+          <dt aria-controls="Nav4" @click="P4 = ! P4"><button
+              style="background-color:#e4b2fe ; border-color:#000000">Autres chiens</button></dt>
           <dd id="Nav4" x-show="P4" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chiens :
           </dd>
           <dd id="Nav4" x-show="P4" x-transition.duration.800ms><a href="/dogs/colordogs.html"><img
