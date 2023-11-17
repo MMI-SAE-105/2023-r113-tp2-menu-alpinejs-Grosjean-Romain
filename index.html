@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{
+  menuIsOpen:false,
+  pM:false,
+  pSC:false,
+  pSD:false,
+  P1:false,
+  P2:false,
+  P3:false,
+  P4:false
+
+
+  }" :class="{noscroll:menuIsOpen,}" x-data="{menuIsOpen:false}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test menu</title>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+  <style>
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #eacbcb;
+      display: grid;
+      place-content: center;
+    }
+
+    .header__menuBtn {
+      position: relative;
+      z-index: 10;
+    }
+
+    .noscroll,
+    .noscroll body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">
+      Menu
+    </button>
+    <h1>Animaux de compagnie</h1>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+      <ul>
+        <li><a href="cats/index.html">FELIS CATUS</a></li>
+        <li><a href="cats/blackcats.html">Chats noirs</a></li>
+        <li><a href="cats/colorcats.html">Autres chats</a></li>
+        <li><a href="dogs/index.html">CANIS LUPUS FAMILIARIS</a></li>
+        <li><a href="dogs/goldenretriever.html">Golden Retriever</a></li>
+        <li><a href="dogs/colordogs.html">Autres chiens</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h2>Introduction</h2>
+  <p>
+    Bienvenue à tous. Ceci est une page dédiée à nos meilleurs amis les animaux de compagnie, principalement les chats
+    et les chiens.
+  </p>
+
+  <button aria-controls="petitmenu" @click="pM = ! pM">
+    Liste des pages</button>
+  <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+
+    <button aria-controls="sousmenuchat" @click="pSC = ! pSC">
+      Chats</button>
+    <div id="sousmenuchat" x-show="pSC" x-transition.duration.800ms>
+
+      <dl x-data="{P1:false}"><a href="/cats/blackcats.html">lien</a>
+        <dt aria-controls="Nav1" @click="P1 = ! P1"><button>Chats noirs</button></dt>
+        <dd id="Nav1" x-show="P1" x-transition.duration.800ms>Ce lien amène à la page consacré aux chats noirs :</dd>
+        <dd id="Nav1" x-show="P1" x-transition.duration.800ms><a href="/cats/blackcats.html">lien</a></dd>
+      </dl>
+      <dl x-data="{P2:false}">
+        <dt aria-controls="Nav2" @click="P2 = ! P2"><button>Autres chats</button></dt>
+        <dd id="Nav2" x-show="P2" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chats</dd>
+        <dd id="Nav2" x-show="P2" x-transition.duration.800ms><a href="/cats/colorcats.html">lien</a></dd>
+      </dl>
+    </div>
+
+    <button aria-controls="sousmenuchien" @click="pSD = ! pSD">
+      Chiens</button>
+    <div id="sousmenu" x-show="pSD" x-transition.duration.800ms>
+
+      <dl x-data="{P3:false}">
+        <dt aria-controls="Nav3" @click="P3 = ! P3"><button>Golden Retriever</button></dt>
+        <dd id="Nav3" x-show="P3" x-transition.duration.800ms>Ce lien amène à la page consacré aux golden retriver :
+        </dd>
+        <dd id="Nav3" x-show="P3" x-transition.duration.800ms><a href="/dogs/goldenretriever.html">lien</a></dd>
+      </dl>
+      <dl x-data="{P4:false}">
+        <dt aria-controls="Nav4" @click="P4 = ! P4"><button>Autres chiens</button></dt>
+        <dd id="Nav4" x-show="P4" x-transition.duration.800ms>Ce lien amène à la page consacré à d'autres chiens</dd>
+        <dd id="Nav4" x-show="P4" x-transition.duration.800ms><a href="/dogs/colordogs.html">lien</a></dd>
+      </dl>
+    </div>
+
+  </div>
+</body>
+
+</html>
