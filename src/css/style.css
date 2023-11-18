@@ -15,6 +15,15 @@ img {
     background: #e79a9a;
     display: grid;
     place-content: center;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .header__menuBtn {
@@ -36,6 +45,9 @@ li {
 
 .link-text {
     color: #56294a;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .ChienChatColor {
@@ -100,7 +112,6 @@ a[href="https://fr.wikipedia.org/wiki/Chat"],
 a[href="https://www.woopets.fr/chien/race/golden-retriever/"],
 a[href="https://www.zooplus.fr/magazine/chien/races-de-chien"],
 a[href="https: //jardinage.lemonde.fr/dossiers-cat3-12-races-chats.html"] {
-
     color: #b56eb0;
     font-style: italic;
     font-weight: bold;
