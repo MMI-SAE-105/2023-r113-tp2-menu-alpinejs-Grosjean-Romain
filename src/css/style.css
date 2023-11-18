@@ -26,6 +26,16 @@ img {
     margin-bottom: 25px;
 }
 
+.menu-item img {
+    margin-right: 10px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #56294a;
+    margin-top: 5px;
+}
+
 .header__menuBtn {
     position: relative;
     z-index: 10;
