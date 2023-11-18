@@ -2,6 +2,10 @@ body {
     background: #56294a;
 }
 
+img {
+    border-radius: 10px;
+}
+
 .menu {
     position: fixed;
     top: 0;
@@ -26,10 +30,13 @@ body {
     overflow: hidden;
 }
 
+li {
+    list-style-type: none;
+}
+
 .link-text {
     color: #56294a;
 }
-
 
 .ChienChatColor {
     background-color: #de8b8b;
@@ -43,12 +50,11 @@ body {
     color: #000000;
 }
 
-.intern-link
-{
-        background-color: #e4b2fe;
-        border-color: #000000;
-        color: #000000;
-    }
+.intern-link {
+    background-color: #e4b2fe;
+    border-color: #000000;
+    color: #000000;
+}
 
 h1 {
     color: #ffffff;
@@ -92,8 +98,8 @@ a[href="https://www.enviedeplus.com/famille/animaux-de-compagnie/superstition-ch
 a[href="https://fr.wikipedia.org/wiki/Chien"],
 a[href="https://fr.wikipedia.org/wiki/Chat"],
 a[href="https://www.woopets.fr/chien/race/golden-retriever/"],
-a[href="https://www.zooplus.fr/magazine/chien/races-de-chien"] {
-
+a[href="https://www.zooplus.fr/magazine/chien/races-de-chien"],
+a[href="https: //jardinage.lemonde.fr/dossiers-cat3-12-races-chats.html"] {
 
     color: #b56eb0;
     font-style: italic;

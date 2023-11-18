@@ -18,24 +18,24 @@
 
 <body>
     <header>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
-           ><img src="/public/icones/MdiMenu.svg"> </button>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"><img
+                src="/public/icones/MdiMenu.svg"> </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
-                <li><a href="../index.html">Page d'accueil<img
-                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../cats/blackcats.html">Chats noirs<img
-                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a>
+                <li><a href="../index.html">Page d'accueil<img src="../public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../cats/blackcats.html">Chats noirs<img src="../public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a>
                 </li>
-                <li><a href="../cats/colorcats.html">Autres chats<img
-                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a>
+                <li><a href="../cats/colorcats.html">Autres chats<img src="../public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a>
                 </li>
-                <li><a href="../dogs/index.html">Les chiens<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../dogs/goldenretriever.html">Golden Retriever<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../dogs/colordogs.html">Autres chiens<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
+                <li><a href="../dogs/index.html">Les chiens<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../dogs/goldenretriever.html">Golden Retriever<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../dogs/colordogs.html">Autres chiens<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
             </ul>
         </nav>
         <aside>
@@ -47,16 +47,31 @@
         </aside>
     </header>
 
-
-    <h1>Les chats (FELIS CATUS)</h1>
-    <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
-    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
-        <p>
-            Le Chat domestique (Felis catus) est une espèce de mammifères carnivores, de la famille des Félidés. Issu de
-            la
-            domestication du chat sauvage Felis silvestris, il était anciennement considéré comme une sous-espèce de
-            celui-ci, sous la dénomination Felis silvestris catus. Source : <a href="https://fr.wikipedia.org/wiki/Chat"
-               class="nounderline" target="_blank">Wikipédia</a>
-        </p>
-
+    <main>
+        <section>
+            <h1>Les chats</h1>
+            <h2>felis catus</h2>
+            <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
+            <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+                <p>
+                    Le Chat domestique (Felis catus) est une espèce de mammifères carnivores, de la famille des Félidés.
+                    Issu de la domestication du chat sauvage Felis silvestris, il était anciennement considéré comme une
+                    sous-espèce de celui-ci, sous la dénomination Felis silvestris catus. Source : <a
+                        href="https://fr.wikipedia.org/wiki/Chat" class="nounderline" target="_blank">Wikipédia</a>.
+                </p>
+            </div>
+            <section>
+                <br>
+                <a href="/cats/blackcats.html"><button type="button" class="intern-link">Chats noirs</button></a>
+                <a href="/cats/colorcats.html"><button type="button" class="intern-link">Autres chats</button></a>
+                </br>
+            </section>
+        </section>
+        <section>
+            <h3>Petite galerie</h3>
+            <img class="media media--fullwidth" src="../public/img/collage_of_Six_Cats-02.jpg">
+        </section>
+    </main>
 </body>
+
+</html>

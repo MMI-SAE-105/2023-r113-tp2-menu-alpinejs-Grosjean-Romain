@@ -19,8 +19,8 @@
 
 <body>
     <header>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
-            ><img src="/public/icones/MdiMenu.svg"> </button>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"><img
+                src="/public/icones/MdiMenu.svg"> </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
                 <li><a href="../index.html">Page d'accueil<img src="../public/icones/MdiMenuRight.svg"
@@ -46,24 +46,34 @@
         </aside>
     </header>
 
-
-    <h1>Les chats noirs</h1>
-    <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
-    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
-        <p>
-            La signification de la superstition du chat noir reste assez obscure. Pour autant, il est de coutume de
-            dire,dans la culture contemporaine française, que croiser un chat noir porte malheur. Certaines coutumes y
-            voient quant à elle un porte-bonheur : en effet, les chats blancs auraient tous un unique poil blanc,
-            véritable
-            talisman porteur de chance éternelle à celui qui le détient. Cela étant, la réputation à travers le monde de
-            notre compagnon à quatre pattes est plutôt celle d'un porteur de mauvais présage. Réincarnation du diable
-            pour
-            certains ou de sorciers pour d'autres, peut-on trouver une signification crédible au chat noir qui porte
-            malheur
-            ? Les origines de la superstition sont en fait bien plus lointaines qu'elles n'y paraissent. Source : <a
-                href="https://www.enviedeplus.com/famille/animaux-de-compagnie/superstition-chat-noir"
-                class="nounderline" target="_blank">Envie
-                de plus</a>
-        </p>
-
+    <main>
+        <section>
+            <h1>Les chats noirs</h1>
+            <h2>Les porteurs de malheur ?</h2>
+            <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
+            <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+                <p>
+                    La signification de la superstition du chat noir reste assez obscure. Pour autant, il est de coutume
+                    de dire,dans la culture contemporaine française, que croiser un chat noir porte malheur. Certaines
+                    coutumes y voient quant à elle un porte-bonheur : en effet, les chats blancs auraient tous un unique
+                    poil blanc, véritable talisman porteur de chance éternelle à celui qui le détient. Cela étant, la
+                    réputation à travers le monde de notre compagnon à quatre pattes est plutôt celle d'un porteur de
+                    mauvais présage. Réincarnation du diable pour certains ou de sorciers pour d'autres, peut-on trouver
+                    une signification crédible au chat noir qui porte malheur ? Les origines de la superstition sont en
+                    fait bien plus lointaines qu'elles n'y paraissent. Source : <a
+                        href="https://www.enviedeplus.com/famille/animaux-de-compagnie/superstition-chat-noir"
+                        class="nounderline" target="_blank">Envie
+                        de plus</a>.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>Petite galerie</h3>
+            <img class="media media--fullwidth" src="../public/img/blackcats/640px-Black_Cat_19149454.jpg">
+            <img class="media media--fullwidth" src="../public/img/blackcats/640px-Black_cat_portraits.jpg">
+            <img class="media media--fullwidth" src="../public/img/blackcats/Black_cat_IMG_1618.jpg">
+        </section>
+    </main>
 </body>
+
+</html>

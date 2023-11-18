@@ -18,22 +18,22 @@
 
 <body>
     <header>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"
-           ><img src="/public/icones/MdiMenu.svg"> </button>
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn"><img
+                src="/public/icones/MdiMenu.svg"> </button>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <ul>
-                <li><a href="../index.html">Page d'accueil<img
-                            src="../public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../cats/index.html">Les chats<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../cats/blackcats.html">Chats noirs<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../dogs/index.html">Les chiens<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../dogs/goldenretriever.html">Golden Retriever<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
-                <li><a href="../dogs/colordogs.html">Autres chiens<img
-                            src="/public/icones/MdiMenuRight.svg" alt="flèche lien"></a></li>
+                <li><a href="../index.html">Page d'accueil<img src="../public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../cats/index.html">Les chats<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../cats/blackcats.html">Chats noirs<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../dogs/index.html">Les chiens<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../dogs/goldenretriever.html">Golden Retriever<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
+                <li><a href="../dogs/colordogs.html">Autres chiens<img src="/public/icones/MdiMenuRight.svg"
+                            alt="flèche lien"></a></li>
             </ul>
         </nav>
         <aside>
@@ -45,12 +45,33 @@
         </aside>
     </header>
 
-
-    <h1>Les autres chats</h1>
-    <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
-    <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
-        <p>
-            . Source : <a href="https://fr.wikipedia.org/wiki/Chat" class="nounderline" target="_blank">Wikipédia</a>
-        </p>
-
+    <main>
+        <section>
+            <h1>Les autres chats</h1>
+            <h2>Un espèce incontournable de la culture web !</h2>
+            <button aria-controls="infos" @click="pM = ! pM">Infos ?</button>
+            <div id="petitmenu" x-show="pM" x-transition.duration.800ms>
+                <p>
+                    Les amoureux des chats connaissent les races de chats et ont leurs préférences. Cependant, la
+                    grandemajorité des chatsdomestiques qui sont dans les foyers français ne disposent pas tous d'un
+                    pedigree, ce qui constituel'élémentindispensable permettant qu'un chat soit reconnu comme chat de
+                    race. Certains aimeront le Chartreux ou le Maine Coon, le Persan ou bien encore le Sacré de
+                    Birmanie,tandis qued'autres nerêveront que d'un chat sans poils comme le Sphynx. Les goûts et les
+                    couleurs ne se discutent pas,comme ondit,cependant vous pourrez découvrir les nombreuses races de
+                    chats reconnues, via ce lien : <a
+                        href="https://jardinage.lemonde.fr/dossiers-cat3-12-races-chats.html" class="nounderline"
+                        target="_blank">Le Monde</a>.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>Petite galerie</h3>
+            <img class="media media--fullwidth"
+                src="../public/img/colorcats/Blue-eyed_domestic_cat_Felis_silvestris_catus.jpg">
+            <img class="media media--fullwidth" src="../public/img/colorcats/Cat_November_2010-1a.jpg">
+            <img class="media media--fullwidth" src="../public/img/colorcats/Sleeping_cat_on_her_back.jpg">
+        </section>
+    </main>
 </body>
+
+</html>
